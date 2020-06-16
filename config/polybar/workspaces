@@ -1,0 +1,69 @@
+[colors]
+    accent = #EDD080
+    bckgrd = #121212
+    select = #161A1B
+
+    background =            #66000000
+    background-alt =        ${self.select}
+    foreground =            ${xrdb:color6:#A5ffffff}
+    foreground-alt =        ${xrdb:color7:#222}
+    primary =               ${xrdb:color1:self.accent}
+    secondary =             ${xrdb:color2:#222}
+    alert =                 ${xrdb:color3:#bd2c40}
+    light =                 ${xrdb:color15:#ffffff}
+    white =                 #FFFFFF
+    grey =                  #AAAAAA
+    transparent =           #00000000
+
+
+[global/wm]
+    margin-top = 0
+    margin-bottom = 0
+
+
+[settings]
+    throttle-output = 5
+    throttle-output-for = 10
+    throttle-input-for = 30
+    screenchange-reload = true
+    font = Iosevka Term SS01:size=12;4
+    bargapp= 10
+    radius = 14
+    barwidth = 100%
+    barheigh = 48
+
+
+[bar/workspaces]
+    monitor = ${env:MONITOR}
+    monitor-strict = true
+    dpi = 96
+    bottom = true
+    width = ${settings.barwidth}
+    height = 4
+    background = ${colors.transparent}
+    foreground = ${colors.foreground}
+    border-top-size = 4
+    border-bottom-size = 0
+    border-color = ${colors.transparent}
+    font-0 = Monoisome:size=10;4
+    font-1 = FontAwesome:pixelsize=10;3
+    font-5 = unifont:size=14;1
+    modules-center = BSP
+
+
+[module/BSP]
+    type = internal/bspwm
+    pin-workspaces = true
+    format = <label-state> <label-mode>
+    label-mode-background = ${colors.foreground}
+    label-focused = "_"
+    label-focused-background = ${colors.foreground}
+    label-focused-padding = 3
+    label-occupied = "_"
+    label-occupied-background = #808080
+    label-occupied-padding = 3
+    label-empty = "_"
+    label-empty-background = #404040
+    label-empty-padding = 3
+    label-separator = "_"
+    label-separator-background = ${colors.transparent}

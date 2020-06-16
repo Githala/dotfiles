@@ -1,0 +1,14 @@
+#!/bin/bash
+JIRA_TICKET=$(rofi -lines 0 -width 20% -dmenu -p "Jira Ticket")
+
+valid='([a-zA-Z]*-)?[0-9]+$%&#'
+
+if [[ $JIRA_TICKET =~ [^valid] ]];
+then
+	if [[ $JIRA_TICKET =~ ^[0-9]+$ ]]
+	then
+		JIRA_TICKET="AT-$JIRA_TICKET"
+	fi
+	google-chrome --profile-directory="Profile 1" https://cloudwise.atlassian.net/browse/$JIRA_TICKET
+fi
+

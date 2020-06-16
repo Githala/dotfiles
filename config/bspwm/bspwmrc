@@ -1,0 +1,34 @@
+#! /bin/sh
+
+# Set java env variable to ensure IDEA will work.
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+compton &
+sxhkd &
+nitrogen --restore &
+xsetroot -cursor_name left_ptr &
+MONITOR=DP-2 polybar -r main &
+MONITOR=HDMI-0 polybar -r main &
+MONITOR=DP-2 polybar -r -c $HOME/.config/polybar/workspaces workspaces &
+MONITOR=HDMI-0 polybar -r -c $HOME/.config/polybar/workspaces workspaces &
+guake &
+
+bspc monitor HDMI-0 -d VI VII VIII IX X
+bspc monitor DP-2   -d I II III IV V
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.5
+bspc config single_monocle	 true
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Slack desktop=VI
+bspc rule -a whatsdesk desktop=VI
+bspc rule -a Caprine desktop=VI
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+#bspc rule -a Google-chrome desktop=II
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
