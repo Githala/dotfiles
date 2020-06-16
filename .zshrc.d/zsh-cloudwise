@@ -1,0 +1,26 @@
+
+# ------------------
+# Cloudwise settings
+# ------------------
+# CLOUDWISE_HOME is the path to where you checkout all cloudwise projects. Other variables and also our scripts assume you have it.
+export CLOUDWISE_HOME="/home/quantu/development/cloudwise"
+
+export DEVTOOLS="$CLOUDWISE_HOME/cloudwise-devtools/scripts"
+export GRADLE_HOME="$CLOUDWISE_HOME/cloudwise-gradle/gradle_new"
+
+export PATH=$PATH:$DEVTOOLS
+export PATH=$GRADLE_HOME/bin:$PATH
+
+##==== Cloudwiesa Aliases ====#
+alias run="$CLOUDWISE_HOME/cloudwise-devtools/scripts/runproject.sh"
+alias runalone="export CW_SSO_LOCAL=false; run;"
+alias runAll="$CLOUDWISE_HOME/cloudwise-devtools/scripts/runAllProjects.sh"
+
+alias cloudwise="cd $CLOUDWISE_HOME"
+alias portal="cd $CLOUDWISE_HOME/cloudwise-portal/"
+alias sso="cd $CLOUDWISE_HOME/cloudwise-sso/"
+alias tapi="cd $CLOUDWISE_HOME/cloudwise-test-api/"
+
+alias watcher="portal; cd portal-default/src/main/webapp/css/; ../../../../../../cloudwise-devtools/scripts/sass-watcher-portal.sh"   
+
+alias tunnel='gcloud compute ssh cloudwise-bastion --project cloudwise-build --zone europe-west1-b --ssh-flag="-D" --ssh-flag="1080" --ssh-flag="-N"'

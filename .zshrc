@@ -105,3 +105,5 @@ export NVM_DIR="$HOME/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Import extra settings
+for f in ~/.zshrc.d/*; do source $f; done
