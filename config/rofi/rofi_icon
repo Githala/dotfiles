@@ -6,14 +6,18 @@
 	rofi.theme: ~/.i3/rofi.rasi
  */
 
+configuration {
+    show-icons: false;
+}
+
 * {
-	accent: #FFFFFF;
+    accent: #FFFFFF;
     spacing: 40% 0 0 46%;
 
     foreground:         		@accent;
     background:         		rgba(0, 0, 0, 0.80);
-    transparent:				rgba(0, 0, 0, 0);
-    background-light:      		rgba(255, 255, 255, 0.10);
+    transparent:			rgba(0, 0, 0, 0);
+    background-light:      		rgba(60, 60, 60, 1);
 
     normal-background: 			@transparent;
     normal-foreground: 			@foreground;
@@ -39,7 +43,13 @@
     border-color:                @background;
     separatorcolor:              @foreground;
     background-color:            @transparent;
-    font:  "Hurmit Nerd Font Mono 30";
+    font:  "TerminessTTF Nerd Font 20";
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    spacing: 0px;
+    elementpadding: 0px;
+    elementmargin: 0px;
 }
 
 
@@ -61,10 +71,17 @@
 }
 
 #element {
-    padding: 30px 45px 30px 0px;
+    padding: 30px 41px 30px 39px;
     background-color: @background-light;
     text-color: @foreground;
     border-radius: 6px;
+    margin: 0px;
+    horizontal-align: 0;
+    spacing: 0;
+}
+
+#textbox {
+    text-color: @background;
 }
 
 #element.selected {

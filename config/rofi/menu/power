@@ -3,11 +3,12 @@ FOREGROUND="#ffbc42"
 PADDINGS="40% 0 0 37%"
 ROFI_OPTIONS=(-theme $HOME/.config/rofi/rofi_icon -theme-str "*{accent: ${FOREGROUND:-#000000}; spacing: $PADDINGS;}")
 
-power_off=""
-reboot=""
-lock=""
-suspend="鈴"
-log_out=""
+power_off=
+reboot=
+lock=
+suspend=鈴
+log_out=
+//log_out=test
 
 options="$power_off\n$reboot\n$lock\n$suspend\n$log_out"
 chosen="$(echo -e "$options" | rofi "${ROFI_OPTIONS[@]}" -dmenu -selected-row 2)"
