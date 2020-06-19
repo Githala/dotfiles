@@ -1,27 +1,4 @@
-[colors]
-    accent = #EDD080
-    bckgrd = #121212
-    select = #161A1B
-
-    background =            #66000000
-    background-alt =        ${self.select}
-    foreground =            ${xrdb:color6:#A5ffffff}
-    foreground-alt =        ${xrdb:color7:#222}
-    primary =               ${xrdb:color1:self.accent}
-    secondary =             ${xrdb:color2:#222}
-    alert =                 ${xrdb:color3:#bd2c40}
-    light =                 ${xrdb:color15:#ffffff}
-    white =                 #FFFFFF
-    grey =                  #AAAAAA
-    transparent =           #00000000
-
-
-[global/wm]
-    margin-top = 0
-    margin-bottom = 0
-
-
-[settings]
+[ws-settings]
     throttle-output = 5
     throttle-output-for = 10
     throttle-input-for = 30
@@ -32,13 +9,13 @@
     barwidth = 100%
     barheigh = 48
 
-
 [bar/workspaces]
+    enable-ipc = true
     monitor = ${env:MONITOR}
     monitor-strict = true
     dpi = 96
     bottom = true
-    width = ${settings.barwidth}
+    width = ${ws-settings.barwidth}
     height = 4
     background = ${colors.transparent}
     foreground = ${colors.foreground}
