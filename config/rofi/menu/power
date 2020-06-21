@@ -25,7 +25,7 @@ case $chosen in
         [ $(echo -e $YESNO | rofi "${ROFI_OPTIONS[@]}" -theme-str "*{accent: #D81159;}" -dmenu -i -p "Are you shure you want to proceed?") ==  ] && systemctl reboot
         ;;
     $lock)
-	    exec  ~/.config/i3lock/blurlock;
+	    exec  dm-tool lock;
         ;;
     $suspend)
 	    [ $(echo -e $YESNO | rofi "${ROFI_OPTIONS[@]}" -theme-str "*{accent: #D81159;}" -dmenu -i -p "Are you shure you want to proceed?") ==  ] && systemctl suspend

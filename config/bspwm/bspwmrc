@@ -7,14 +7,11 @@ compton &
 sxhkd &
 nitrogen --restore &
 xsetroot -cursor_name left_ptr &
-MONITOR=DP-2 polybar -r main &
-MONITOR=HDMI-0 polybar -r main &
-MONITOR=DP-2 polybar -r -c $HOME/.config/polybar/workspaces workspaces &
-MONITOR=HDMI-0 polybar -r -c $HOME/.config/polybar/workspaces workspaces &
+workspaces_multimonitor & 
+polybar_multimonitor &
 guake &
 
-bspc monitor HDMI-0 -d VI VII VIII IX X
-bspc monitor DP-2   -d I II III IV V
+#bspc config focus_follows_pointer true
 
 bspc config border_width         1
 bspc config window_gap          12
