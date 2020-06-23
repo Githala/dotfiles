@@ -1,12 +1,10 @@
 #! /bin/sh
 
-# Set java env variable to ensure IDEA will work.
-export _JAVA_AWT_WM_NONREPARENTING=1
-
-compton &
+#compton &
 sxhkd &
-nitrogen --restore &
-xsetroot -cursor_name left_ptr &
+#nitrogen --restore &
+#xsetroot -cursor_name left_ptr &
+~/.config/bspwm/monitor-order &
 workspaces_multimonitor & 
 polybar_multimonitor &
 guake &

@@ -1,6 +1,7 @@
 ##run_once is a script in /usr/bin that prevents running script if it is running already
 ##
 
+export _JAVA_AWT_WM_NONREPARENTING=1
 ## Load appearance settings
 xsetroot -cursor_name left_ptr &
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &

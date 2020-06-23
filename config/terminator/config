@@ -4,14 +4,15 @@
 [keybindings]
 [profiles]
   [[default]]
-    background_darkness = 0.85
+    background_color = "#2d2d2d"
+    background_darkness = 0.9
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = NotoSansMono Nerd Font Medium 10
+    foreground_color = "#d3d0c8"
     show_titlebar = False
     scrollbar_position = hidden
     use_system_font = False
-    use_theme_colors = True
 [layouts]
   [[default]]
     [[[window0]]]
@@ -20,4 +21,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
+      profile = default
 [plugins]
